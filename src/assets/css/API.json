@@ -1,0 +1,222 @@
+API Documentation
+Controllers
+The API controllers contain all the endpoints with their respective HTTP methods and details. Below is the structure for each controller:
+Example Controller
+This structure is consistent across all controllers. Each controller includes the following details for its endpoints:
+Endpoint Details
+Endpoint: The path after the domain in the URL.
+Method: The HTTP method (e.g., GET, POST, DELETE, etc.).
+Summary: A brief description of the endpoint (provided by the developer).
+Parameters: Details about the parameters sent in the request.
+Example Parameter
+Name: The name of the parameter (e.g., student ).
+In: The location where the parameter is sent. Possible values:
+body
+url
+query
+route
+Required: Indicates if the parameter is mandatory ( true or false ).
+Type: The data type of the parameter (e.g., string , int32 , etc.).
+Body Parameters: This field is null unless the in value is FromBody . If FromBody , it contains additional parameters for the JSON object.
+Example Body Parameters
+Name: The name of the body parameter (e.g., id ).
+Required: Indicates if the body parameter is mandatory ( true or false ).
+Type: The data type of the body parameter (e.g., string , int32 , etc.).
+Common Responses
+This section includes common HTTP responses that may be returned by the API. These responses can help you understand the possible outcomes of your requests.
+Example Common Responses
+200 OK: The request was successful.
+400 Bad Request: The request was invalid or cannot be served.
+401 Unauthorized: Authentication is required or has failed.
+404 Not Found: The requested resource could not be found.
+500 Internal Server Error: An unexpected error occurred on the server.
+Example JSON Structure
+Below is an example JSON structure that represents the API documentation:
+{
+"controllers": {
+"Crack Controller": [
+{
+"endpoint": "all-sites/{keyword}",
+"method": "GET",
+"summary": "TODO: maybe I will add this feature.",
+"parameters": [
+{
+"name": "keyword",
+"in": "InUrl",
+"required": true,
+"type": "String",
+"bodyParameters": null
+}
+}
+]
+},
+{
+"endpoint": "Home-sites",
+"method": "PATCH",
+"summary": "TODO: maybe I will add this feature.",
+"parameters": [
+{
+"name": "req",
+"in": "FromBody",
+"required": true,
+"type": "crack.oldgap.com.Controllers.CrackController.BodyFrom",
+"bodyParameters": [
+{
+"name": "test",
+"required": true,
+"type": "String"
+},
+{
+"name": "grade",
+"required": true,
+"type": "Int32"
+}
+]
+}
+]
+},
+{
+"endpoint": "fuck-sites",
+"method": "DELETE",
+"summary": "TODO: maybe I will add this feature.",
+"parameters": [
+{
+"name": "size",
+"in": "FromRoute",
+"required": true,
+"type": "String",
+"bodyParameters": null
+},
+{
+"name": "cheap",
+"in": "FromRoute",
+"required": true,
+"type": "String",
+"bodyParameters": null
+}
+]
+},
+{
+"endpoint": "Query-sites",
+"method": "DELETE",
+"summary": "TODO: maybe I will add this feature.",
+"parameters": [
+{
+"name": "size",
+"in": "FromQuery",
+"required": true,
+"type": "String",
+"bodyParameters": null
+},
+{
+"name": "cheap",
+"in": "FromQuery",
+"required": true,
+"type": "String",
+"bodyParameters": null
+}
+]
+},
+{
+"endpoint": "all-sites",
+"method": "DELETE",
+"summary": "TODO: maybe I will add this feature.",
+"parameters": [
+{
+"name": "req",
+"in": "FromBody",
+"required": true,
+"type": "crack.oldgap.com.Controllers.CrackController.BodyFrom",
+"bodyParameters": [
+{
+"name": "test",
+"required": true,
+"type": "String"
+},
+{
+"name": "grade",
+"required": true,
+"type": "Int32"
+}
+]
+}
+]
+},
+{
+"endpoint": "steamrip-dot-com/{keyword}",
+"method": "GET",
+"summary": "TODO: maybe I will add this feature.",
+"parameters": [
+{
+"name": "keyword",
+"in": "InUrl",
+"required": true,
+"type": "String",
+"bodyParameters": null
+}
+]
+},
+{
+"endpoint": "crack-games-dot-org/{keyword}",
+"method": "GET",
+"summary": "TODO: maybe I will add this feature.",
+"parameters": [
+{
+"name": "keyword",
+"in": "InUrl",
+"required": true,
+"type": "String",
+"bodyParameters": null
+}
+]
+},
+{
+"endpoint": "fitgirl-repack-dot-site/{keyword}",
+"method": "GET",
+"summary": "TODO: maybe I will add this feature.",
+"parameters": [
+{
+"name": "keyword",
+"in": "InUrl",
+"required": true,
+"required": true,
+"type": "String",
+"bodyParameters": null
+}
+]
+}
+],
+"Values Controller": [
+{
+"endpoint": "nonoe",
+"method": "GET",
+"summary": "TODO: maybe I will add this feature.",
+"parameters": []
+}
+]
+},
+"commonResponses": {
+"200": "Ok",
+"201": "Created",
+"202": "Accepted",
+"204": "No Content",
+"400": "Bad Request",
+"401": "Unauthorized",
+"403": "Forbidden",
+"404": "Not Found",
+"405": "Method Not Allowed",
+"406": "Not Acceptable",
+"408": "Request Timeout",
+"413": "Payload Too Large",
+"414": "URI Too Long",
+"423": "Locked",
+"429": "Too Many Requests",
+"431": "Request Header Fields Too Large",
+"500": "Inertnal Server Error",
+"501": "Not Implemented",
+"502": "Bad Gateway"
+}
+}
+Notes
+This documentation is dynamically generated and automated for every endpoint, method, and controller.
+The structure ensures consistency and clarity across all API endpoints.
